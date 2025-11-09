@@ -1,58 +1,62 @@
 # Rock Paper Scissors Game
 
-<p>This program is a simple interactive game written in HTML, CSS, and JavaScript. 
-It allows the user to play Rock Paper Scissors against the computer while demonstrating 
-key programming concepts such as user input, randomization, conditionals, list, selection, and functions with parameters.</p>
+<p>This program is a fully functional Rock Paper Scissors game created with HTML, CSS, and JavaScript. It allows the user to compete against a computer opponent, producing accurate win, lose, or draw results. The program also integrates images, sounds, and dynamic text to create an interactive experience that responds to both mouse and keyboard inputs.</p> 
 
 <br>
 
-<p>**Purpose**</p>
-<p>The purpose of this program is to show how JavaScript can be used to make a webpage interactive. 
-It also demonstrates how to connect user actions, such as button clicks and key presses, to game logic and multimedia elements like sounds and images. It also shows how to personalize user experience through greetings that depend on the current time and user input.</p>
+<p><u><b>Purpose</b></u></p>
+<p>The purpose of this program is to demonstrate how JavaScript can make webpages interactive through user input, randomization, conditional logic, multimedia elements, and DOM manipulation. It shows how to link user actions, such as button clicks and key presses, to meaningful program responses while reinforcing the understanding of key programming structures and parameterized functions.</p> 
 
 <br>
 
-<p>**Inputs**</p>
-<p>- User enters their name through a prompt when the page loads.</p> 
-<p>- User can click the <b>“Change Name”</b> button to enter a new name at any time.</p>
-<p>- The program automatically checks the current time of day (morning, afternoon, or evening) using the computer’s system clock.</p> 
-<p>- User clicks the <b>“Play Game”</b> button or presses the <b>“S”</b> key to start a round of Rock Paper Scissors.</p> 
-<p>- User enters “rock,” “paper,” or “scissors” in a prompt to make a move.</p> <p>- Keyboard inputs and mouse clicks also trigger different sound effects.</p>
+<p><u><b>Inputs</b></u></p>
+<p>- User enters their name through a prompt when the webpage loads.</p> 
+<p>- User can click the <b>“Change Name”</b> button to rename themselves at any time.</p> 
+<p>- The program automatically detects the current time of day and displays a personalized greeting (“Good morning,” “Good afternoon,” or “Good evening”).</p> 
+<p>- User starts the game by clicking the <b>“Play Game”</b> button or pressing the <b>“S”</b> key.</p> 
+<p>- User selects their move by typing <i>rock</i>, <i>paper</i>, or <i>scissors</i> in a prompt.</p> 
+<p>- Keyboard inputs such as the <b>Shift</b> key trigger sound effects.</p> 
 
 <br>
 
-<p>**Outputs**</p>
-<p>-A personalized greeting is displayed on the page, such as <i>“Good afternoon, Alex! Welcome to the Rock Paper Scissors game!”</i></p> 
-<p>- The current player name is shown and updated dynamically whenever the name changes.</p> 
-<p>- The result of each game (win, lose, or draw) is displayed as text below the game area.</p> 
-<p>- An image representing the result appears: a <b>cake</b> for a win, <b>coal</b> for a loss, and a <b>glass bead</b> for a draw.</p> 
-<p>- Background sounds and key-press effects play to enhance interactivity.</p> <br>
+<p><u><b>Outputs</b></u></p>
+<p>- Personalized greeting text that changes based on both player name and time of day.</p> 
+<p>- Game results displayed as text: <b>You win!</b>, <b>You lose!</b>, or <b>It’s a draw!</b></p> 
+<p>- Corresponding images are displayed for each result: a <b>cake</b> for a win, <b>coal</b> for a loss, and a <b>glass bead</b> for a draw.</p> 
+<p>- Multiple sound effects play during various interactions (button clicks, key presses, and game events).</p> 
 
 <br>
 
-<p>**Function with Parameters Example**</p>
-<p>The program includes a parameterized function that updates the personalized greeting depending on both the user’s name and the time of day:</p> 
+<p><u><b>Game Logic and Programming Concepts</b></u></p>
+<p>The core of the program is the <code>play_rps()</code> function, which implements the game’s logic using key programming concepts:</p> 
+<p>- <b>List (Array):</b> A list of possible computer moves is stored in an array: <code>const computer_choices = ['rock', 'paper', 'scissors'];</code></p> 
+<p>- <b>Selection (Conditional Statements):</b> The program uses <code>if</code> and <code>else if</code> statements to determine game outcomes and to detect the correct time of day for greetings.</p> 
+<p>- <b>Iteration (Loop):</b> A <code>while</code> loop ensures valid player input by repeatedly prompting until the user enters “rock,” “paper,” or “scissors.”</p> 
+<p>- <b>Accurate Win Conditions:</b> The conditional logic correctly determines whether the user wins, loses, or draws against the computer’s randomized move.</p> 
+
+<br>
+
+<p><u><b>Function with Parameter</b></u></p>
+<p>The game includes a function that uses parameters to personalize greetings based on both the user’s name and the current time of day:</p> 
 <pre> function greet(username, time) { const greetingtext = `Good ${time}, ${username}! Welcome to the Rock Paper Scissors game!`; document.getElementById('greeting').textContent = greetingtext; } </pre> 
 <p><b>Parameters:</b></p> 
-<p>- <b>username</b>: The current player’s name, entered by the user.</p> 
-<p>- <b>time</b>: The time of day (“morning,” “afternoon,” or “evening”) calculated from the system clock.</p> <p>This function demonstrates how parameters can dynamically change webpage content based on real-time data and user input.</p> 
+<p>- <b>username</b>: The name entered by the player.</p> 
+<p>- <b>time</b>: The time of day (morning, afternoon, or evening) determined from the computer’s system clock.</p> <p>This demonstrates how a function with parameters can modify webpage content dynamically according to both user input and external data.</p>
 
 <br>
 
-<p>**Additional JavaScript Concepts Demonstrated**</p>
-<p>- <b>Event Listeners:</b> Used to detect button clicks and key presses (for playing sounds, starting the game, or renaming the player).</p> 
-<p>- <b>DOM Manipulation:</b> Elements such as text, images, and results are updated dynamically through <code>document.getElementById()</code>.</p> 
-<p>- <b>Conditional Statements:</b> Used to determine the time of day and the winner of each round.</p> 
-<p>- <b>Randomization:</b> The computer’s choice is selected randomly from rock, paper, or scissors.</p> 
-<p>- <b>Multimedia Integration:</b> Audio effects play on key events to enhance user experience.</p> 
+<p><u><b>Multimedia and Interactivity</b></u></p>
+<p>- <b>Images:</b> Each outcome is paired with a specific image (cake, coal, or glass bead) displayed on the screen.</p> 
+<p>- <b>Sounds:</b> Three sound files play at different interaction points — when clicking buttons, pressing keys, or starting the game.</p> 
+<p>- <b>Text Outputs:</b> Greeting, username, and game results update dynamically through DOM manipulation.</p> <p>- <b>Mouse and Keyboard Inputs:</b> Users can control the game using both the mouse (buttons) and keyboard (keys).</p> 
 
 <br>
 
-
-<p>**How to Use**</p>
+<p><u><b>How to Use</b></u></p>
 <p>1. Open the HTML file in a browser.</p> 
-<p>2. Enter your name when prompted. The page will greet you based on the current time (e.g., morning or evening).</p> 
-<p>3. Click <b>“Play Game”</b> or press <b>“S”</b> to begin.</p> 
-<p>4. Enter <i>rock</i>, <i>paper</i>, or <i>scissors</i> in the prompt window.</p> 
-<p>5. View the game result and image that appear below.</p> 
-<p>6. Use <b>“Change Name”</b> at any time to update your player name and greeting instantly.</p>
+<p>2. Enter your name when prompted; the page will greet you depending on the time of day.</p> 
+<p>3. Click <b>“Play Game”</b> or press <b>“S”</b> to start a round.</p> 
+<p>4. Enter <i>rock</i>, <i>paper</i>, or <i>scissors</i> when prompted.</p> 
+<p>5. View the result, image, and text updates on the screen.</p> 
+<p>6. Click <b>“Change Name”</b> to rename yourself and update your greeting instantly.</p> <br>
+
